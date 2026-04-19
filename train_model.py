@@ -1,3 +1,5 @@
+#This file is migrated from the notebook to here by IA and myself (as it required cleaning and avoiding bifurcations from the notebook).
+
 from __future__ import annotations
 
 from pathlib import Path
