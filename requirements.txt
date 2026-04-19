@@ -1,0 +1,15 @@
+# Core data and modeling
+numpy
+pandas
+scikit-learn
+imbalanced-learn
+xgboost
+
+# Visualization and analysis
+matplotlib
+seaborn
+plotly
+
+# Notebook support
+ipykernel
+notebook
