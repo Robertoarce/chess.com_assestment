@@ -60,7 +60,7 @@ About the modeling:
 1. Finally this notebook will be served for the final script as required by the assignment.
 
 
-Modeling Objectives:
+Modeling notebook file Objectives:
 1. Create a benchmark playground for different models and strategies, to with different:
     1. Models (No hyperparameterization with optuna)
     1. Pipelines (only scikit learn pipelines)
