@@ -60,14 +60,14 @@ About the modeling:
 1. Finally this notebook will be served for the final script as required by the assignment.
 
 
-Objective:
+Modeling Objectives:
 1. Create a benchmark playground for different models and strategies, to with different:
     1. Models (No hyperparameterization with optuna)
     1. Pipelines (only scikit learn pipelines)
     1. Strategies (model alone, layers, ensemble) <-- more possible but this is good enough for the timing
     1. Features selections
-1. the model selection is base on the macro F1 + log loss (if there is a tie) on validation data and the test set is only for confirmation (not selection).
-1. Be the foundation for the final script (as done with api discovery that is for get_data)
+1. Regarding the model selection: this is based on the macro F1 + log loss (if there is a tie) on validation data; the test set is only for confirmation (not selection).
+
 
 ## Project  Workflow
 
@@ -78,7 +78,7 @@ The repository follows a staged workflow:
 3. Benchmarking and model selection in modeling.ipynb.
 4. Standalone reproduction of the notebook pipeline in train_model.py.
 
-There are indepth comments in the notebooks!!! 
+Please note that there are indepth comments in the notebooks!!! 
 
 ## Modeling Approach
 
@@ -88,9 +88,9 @@ The selection rule is validation-first: choose the model with the best validatio
 
 There is a lot of exploration in the notebooks such as: experiments, feature selection, multicollinearity checks, and imbalance handling through ADSYN or class weighting. 
 
-## Current Result
+## Result
 
-The validation-selected model is XGB + ADASYN. Feature-importance analysis is used as an interpretation aid after model selection, while still keeping the overall approach focused on leakage-safe pre-game signals and validation-driven model choice.
+The validation-selected model is XGB + ADASYN. Feature-importance analysis is used as an interpretation aid after model selection, while still keeping the overall approach focused on leakage-safe pre-game signals (this by using the round split) and validation-driven model choice.
 
 ## Overall features importance results:
 The best model strenght is still base on the rating, but its improvement over the rule-based baseline comes from combining that signal with past performance and draw-related history.
@@ -119,6 +119,7 @@ But the test results differ, the RF + ADASYN is better on the held-out test set:
 1. The usage of player stats and profiles, to avoid more time usage and complexity.
 1. A more robust time-based validation scheme with more than one temporal validation window.
 1. Add more data (tournaments) to have a broader range (this will most likely also improve variance and confidence of the model).
+1. A two staged ensemble approach, by using one model for draw-win/loss classification and then win-loss classification.
 
 
 # About the usage of AI:
