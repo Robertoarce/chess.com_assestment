@@ -139,6 +139,7 @@ This has been a really passionate test!. As a chess player I was sure that elo w
 
 # OUTCOME
 
+```bash
  chess git:(main) python train_model.py 
 === FETCHING DATA ===
  Saving finished dataframe into CSV...
@@ -194,7 +195,9 @@ XGB (sample_weight)    0.6531    0.8392    0.5011       0.6548   0.7417    0.649
        GBM + ADASYN    0.6693    0.8014    0.4805       0.6577   0.7739    0.6663    0.0199
      Rule-based Elo    0.5226    0.9750    0.4802       0.5987   0.5124    0.5255    0.5695
 
+
 === SELECTED MODEL ===
+
 Validation-selected model: XGB + ADASYN
 Validation macro F1 / log loss: 0.4494 / 0.8857
 Selected model on test macro F1 / log loss: 0.4861 / 0.8027
@@ -225,3 +228,5 @@ black_previous_draw_pct_as_white           0.0178          0.0065
   white_previous_losses_as_white      0.0312
 white_previous_loss_pct_as_white      0.0268
   black_previous_losses_as_black      0.0257
+
+```
