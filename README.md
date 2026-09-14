@@ -55,7 +55,10 @@ About the data:
 About the modeling: 
 
 1. Our Baseline will be a very vanila model base on Elo difference AND we will give ficticious probabilities (to avoid over engineering).
+   ![Elo Difference](chess.png)
 1. Since there is an imbalance in data we will use 2 balancing techniques (ADASYN and model class Weights).
+   ![Imbalance in data](imbalance.png)
+   ![winner distribution](winners.png)
 1. The main selected models to test will be LR (excelent for later interpretability), tree base model (Random Forest, GradientBoostingClassifier), and the best in class XGBoost that is a strong tabular model baseline. All of them are much easy to interpret compared to DL models.
 1. Finally this notebook will be served for the final script as required by the assignment.
 
